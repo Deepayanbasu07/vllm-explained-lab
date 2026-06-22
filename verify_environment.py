@@ -32,6 +32,7 @@ def verify_environment():
     print("\n[2/5] Checking required packages...")
     try:
         import torch
+        # pyrefly: ignore [missing-import]
         import transformers
         print(f"  PASS - torch {torch.__version__}")
         print(f"  PASS - transformers {transformers.__version__}")
@@ -55,7 +56,9 @@ def verify_environment():
     # Check 4: Additional packages
     print("\n[4/5] Checking additional packages...")
     try:
+        # pyrefly: ignore [missing-import]
         import gradio
+        # pyrefly: ignore [missing-import]
         import aiohttp
         import requests
         print(f"  PASS - gradio {gradio.__version__}")
@@ -71,6 +74,7 @@ def verify_environment():
     print("\n[5/5] Downloading SmolLM-135M model...")
     print("  This may take a minute on first run...")
     try:
+        # pyrefly: ignore [missing-import]
         from transformers import AutoModelForCausalLM, AutoTokenizer
 
         model_name = "HuggingFaceTB/SmolLM-135M"
