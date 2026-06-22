@@ -1,0 +1,9 @@
+vllm==0.11.0
+transformers
+gradio
+matplotlib
+openai
+aiohttp
+requests
+numpy
+torch
